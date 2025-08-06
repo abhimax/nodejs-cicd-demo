@@ -16,5 +16,12 @@
     "url": "https://github.com/abhimax/nodejs-cicd-demo/issues"
   },
   "homepage": "https://github.com/abhimax/nodejs-cicd-demo#readme",
-  "description": ""
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
+  },
+  "devDependencies": {
+    "jest": "^30.0.5",
+    "supertest": "^7.1.4"
+  }
 }

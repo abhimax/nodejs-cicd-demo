@@ -1,0 +1,38 @@
+# Node.js dependencies
+/node_modules/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Dependency directories
+/bower_components/
+
+# Testing
+/coverage/
+
+# Build directories
+/dist/
+/build/
+
+# Environment variables
+.env
+
+# IDE / Editor folders
+.vscode/
+.idea/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Optional: Ignore package-lock.json if you don't want it in version control (not recommended)
+# package-lock.json
+
+# Optional: Ignore the "logs" directory for log files if you are logging to disk (not recommended for production)
+logs/
+
+# Optional: Ignore debug files (if you are using a debugger that generates these files)
+*.log
+
