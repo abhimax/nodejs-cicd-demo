@@ -1,0 +1,34 @@
+name: CI/CD Pipeline
+
+on:
+  push:
+    branches:
+      - main # Trigger the pipeline on push to the 'main' branch
+  pull_request:
+    branches:
+      - main # Trigger for pull requests targeting 'main' branch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: "14" # Specify the Node.js version
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Run tests
+        run: npm test
+
+      - name: Deploy to Production (optional step)
+        if: github.ref == 'refs/heads/main'
+        run: |
+          echo "Deploying to production..."
+          # Here you could run commands to deploy the app to your server (e.g., SSH or Heroku CLI)
